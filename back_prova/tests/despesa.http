@@ -1,0 +1,8 @@
+### Cadastrar despesa
+POST http://localhost:3333
+Content-Type: application/json
+
+{
+    "descricao" : "Conta de luz",
+    "preco" : 120
+}
