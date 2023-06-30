@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Despesa } from "../../models/despesa.model";
 import Button from "@mui/material/Button";
 
 function MediaDespesa() {

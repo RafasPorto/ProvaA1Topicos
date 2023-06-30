@@ -1,6 +1,16 @@
+import React from "react";
+import CadastrarDespesa from "./components/pages/CadastrarDespesa";
+import ListarDespesas from "./components/pages/ListarDespesa";
+import Nav from "./components/layout/Nav";
+
 function App() {
   return (
-    <div className="Despesa">
+    <div>
+      <Nav />
+
+      <CadastrarDespesa/>
+      
+      <ListarDespesas/>
     </div>
   );
 }
