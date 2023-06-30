@@ -9,13 +9,18 @@ export class DespesaController {
     despesa.descricao = request.body.descricao;
     despesa.preco = Number.parseInt(request.body.preco);
 
-    const despesaCadatrada = await prisma.despesa.create({
+    const despesaCadastrada = await prisma.despesa.create({
       data: {
         descricao: despesa.descricao,
         preco: despesa.preco,
       },
     });
 
-    return response.status(201).json({ message: "Despesa cadastrada!", dados: despesaCadatrada });
+    return response.status(201).json({ message: "Despesa cadastrada!", dados: despesaCadastrada });
+  }
+
+  async listar(req : Request, res : Response) : Promise<Response> {
+    const despesas = await prisma.despesa.findMany({});
+    return res.status(200).json({ Message : "LIstagem de despesas concluida!", dados : despesas });
   }
 }
